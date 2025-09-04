@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business card with theme</title>
+    <style>
+        *{
+            margin: 5px;
+            padding: 5px;
+        }
+        input{
+            display: contents;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+             height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg,#7686cb,#78539d);
+
+        }
+       
+        .box{
+            height: 475px;
+            width: 550px;
+            border: 3px solid black;
+            border-radius: 10px;
+            background: rgb(65, 223, 170);
+
+        }
+     .image1{
+       height: 150px;
+       border: 4px solid black;
+       border-radius: 50%;
+     display: block;
+     margin: auto;
+       border-color: rgb(3, 3, 36);
+       padding: 2px;
+            }
+            h1{
+               font-size: xx-large; 
+               font-weight: bolder;
+               text-align: center;
+             
+            }
+            h2{
+                font-size:large;
+                text-align: center;
+            }
+            .para{
+                font-size: medium;
+                text-align: center;
+                font-weight: 500;
+            
+            }
+            .social{
+                display: flex;
+                justify-content:center ;
+                gap: 30px;
+                margin-top: 10px;
+            }
+            .social-link{
+                display: inline-flex;
+                align-items: center;
+                text-decoration: none;
+                
+            }
+            .social-link svg{
+                cursor: pointer;
+            }
+            .dark-mode{
+                background: #222;
+                color: #fff;
+                box-shadow: 0px 4px 12px rgba(255,255,255,0.1);
+            }
+            .bn{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: transparent;
+                border: none;
+                font-size: 22px;
+                cursor: pointer;
+            }
+ #business-card {
+  position: relative;
+  background: #f9f9f9;
+  color: #000;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  width: 300px;
+  margin: 50px auto; 
+}
+
+
+#business-card.dark-mode {
+  background: #222222c6;
+  color: #ffffffa5;
+}
+
+
+#business-card .bn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+        
+    </style>
+</head>
+<body>
+     <BUtton class="bn" onclick="toggleMode()">🌞</BUtton>
+        
+    </div>
+    <div class="box" id="business-card">
+         <h1>Vanshika Garg</h1> 
+         <h2>Full Stack Developer</h2>
+   <img class="image1" src="WhatsApp Image 2025-08-28 at 19.16.33_243dc368.jpg" alt="">
+   
+    <p class="para">Aspiring Full Stack Developer with a passion for building dynamic, user friendly web applications. And keen learner in Data Analytics, transfroming data into meaningful insights for smarter decisions.</p>
+     
+      <div class="social">
+         <a href="//www.linkedin.com/in/vanshika-garg-08135a2a1/" target="_blank" class="social">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="25" fill="#0A66C2" viewBox="0 0 24 24">
+    <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 
+             2.76 2.24 5 5 5h14c2.76 0 5-2.24 
+             5-5v-14c0-2.76-2.24-5-5-5zm-11 
+             19h-3v-10h3v10zm-1.5-11.27c-.96 
+             0-1.73-.78-1.73-1.73s.78-1.73 
+             1.73-1.73 1.73.78 
+             1.73 1.73-.77 1.73-1.73 
+             1.73zm13.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 
+             0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.88v1.37h.04c.4-.75 
+             1.38-1.54 2.84-1.54 3.04 0 3.6 2 
+             3.6 4.6v5.6z"/>
+  </svg>
+  
+</a>
+
+<a href="gargvanshu2005@gmail.com" target="_blank" class="social-link">
+    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 48 48">
+      <path fill="#EA4335" d="M24 24L4 12v24c0 2.2 1.8 4 4 4h8V27h16v13h8c2.2 0 4-1.8 4-4V12L24 24z"/>
+      <path fill="#FBBC04" d="M44 12v-1c0-2.2-1.8-4-4-4H8c-2.2 0-4 1.8-4 4v1l20 12 20-12z"/>
+      <path fill="none" d="M0 0h48v48H0z"/>
+    </svg>
+  </a>
+      </div>
+      
+ </div>
+
+ <script>
+    function toggleMode(){
+      let card=  document.getElementById("business-card")
+        let btn = document.querySelector(".bn");
+
+    card.classList.toggle("dark-mode");
+    if (card.classList.contains("dark-mode")) {
+      btn.textContent = "🌙";  
+    } else {
+      btn.textContent = "🌞";  
+    }
+    }
+ </script>
+</body>
+</html>
