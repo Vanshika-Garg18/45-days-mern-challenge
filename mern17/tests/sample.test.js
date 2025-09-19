@@ -1,0 +1,3 @@
+test("Simple Test Case", () => {
+  expect(2 + 2).toBe(4);
+});
